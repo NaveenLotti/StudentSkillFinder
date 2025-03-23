@@ -1,0 +1,45 @@
+.student-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+label{
+    font-size: 1.5rem;
+}
+input{
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border:1px solid black;
+}
+input:focus{
+    background-color: rgb(107, 104, 104);
+}
+
+input::placeholder{
+    font-size: 1.25rem;
+    color: rgb(105, 39, 198);
+}
+
+button{
+    margin-top: 20px;
+    font-size: 1.15rem;
+    border-radius: 10px;
+    border: 1px solid rgb(23, 2, 2);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(105, 39, 198);
+}
+
+button:active{
+    background-color: rgb(69, 11, 150);
+}
+
+.search-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
