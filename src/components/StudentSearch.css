@@ -1,45 +1,35 @@
-.student-search{
+.student-search {
+    min-width: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-label{
-    font-size: 1.5rem;
-}
-input{
-    font-size: 1.5rem;
-    border-radius: 5px;
-    border:1px solid black;
-}
-input:focus{
-    background-color: rgb(107, 104, 104);
-}
-
-input::placeholder{
-    font-size: 1.25rem;
-    color: rgb(105, 39, 198);
-}
-
-button{
-    margin-top: 20px;
-    font-size: 1.15rem;
-    border-radius: 10px;
-    border: 1px solid rgb(23, 2, 2);
-}
-
-button:hover{
-    cursor: pointer;
-    background-color: rgb(105, 39, 198);
-}
-
-button:active{
-    background-color: rgb(69, 11, 150);
-}
-
-.search-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 170px;
+}
+
+.student-search button {
+    margin: 20px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+
+}
+
+.student-search input {
+    width: 200px;
+    height: 35px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.student-search button:hover {
+    background-color: rgb(88, 171, 238);
+}
+
+.student-search input:hover {
+    border: 1px solid rgb(208, 28, 16);
 }
