@@ -2,10 +2,13 @@ import React from "react";
 import { useState } from 'react'
 import "./StudentSearch.css"
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { fetchStudentDetails } from "../../redux/slices/studentSlice";
 
 const StudentSearch = () => {
     const [rollNo, setRollNo] = useState("");
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -13,7 +16,7 @@ const StudentSearch = () => {
             alert("Please enter a roll number");
             return
         }
-        navigate(`/student/${rollNo}`);
+        dispatch(fetchStudentDetails(rollNo));
     }
 
     return (

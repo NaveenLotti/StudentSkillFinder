@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import StudentSearch from './components/StudentSearch'
+import Academics from './components/academics';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -7,7 +8,9 @@ function App() {
   return (
     <>
     <h1>Studnet Skill Finder </h1>
-    <StudentSearch></StudentSearch>      
+    <StudentSearch></StudentSearch>
+    <Academics></Academics>
+
     </>
   )
 }
