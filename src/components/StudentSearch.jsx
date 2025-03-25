@@ -17,22 +17,21 @@ const StudentSearch = () => {
             return
         }
         dispatch(fetchStudentDetails(rollNo));
+        navigate('/dashboard/academics')
     }
 
     return (
         <div className="search-div">
-            <div className="student-search">
+        <div className="student-search">
             <label htmlFor="rollNo">Roll Number:</label>
             <input type="text" 
             name="rollNo"
             placeholder="Enter Roll Number" 
             value={rollNo} 
             onChange={(e)=>setRollNo(e.target.value)}/>
-        </div>
+        </div>            
         <button onClick={handleSubmit}>Search</button>
-        </div>
-        
-    )
+    </div>
+   )
 }
-
 export default StudentSearch
