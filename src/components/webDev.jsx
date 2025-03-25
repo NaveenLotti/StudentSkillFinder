@@ -16,8 +16,21 @@ const WebDev = () => {
     return (
         <>
             <h1>Web Development</h1>
+            <img src={`data:image/jpeg;base64,${student.image}`} alt="StudentImage" />
             <h2>Roll No: {student.rollNo}</h2>
             <h2>Name: {student.name}</h2>
+
+            {student.webDevelopment ? (
+                <ul>
+                    {Object.entries(student.webDevelopment).map(([subject, score], index) => (
+                        <li key={index}>
+                            <strong>{subject}:</strong> {score}
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>No Web Development data available</p>
+            )}
         </>
     );
 };

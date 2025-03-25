@@ -16,8 +16,21 @@ const OtherTech = () => {
     return (
         <div>
             <h1>Other Technologies</h1>
+            <img src={`data:image/jpeg;base64,${student.image}`} alt="StudentImage" />
             <h2>Roll No: {student.rollNo}</h2>
             <h2>Name: {student.name}</h2>
+
+            {student.other ? (
+                <ul>
+                    {Object.entries(student.other).map(([subject, score], index) => (
+                        <li key={index}>
+                            <strong>{subject}:</strong> {score}
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>No Otherr Technologies data available</p>
+            )}
         </div>
     );
 };

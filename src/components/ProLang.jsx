@@ -16,8 +16,21 @@ const ProLang = () =>{
     return(
         <>
         <h1>Programming Languages</h1>
+        <img src={`data:image/jpeg;base64,${student.image}`} alt="StudentImage" />
         <h2>Roll No: {student.rollNo}</h2>
         <h2>Name: {student.name}</h2>
+
+        {student.programmingLanguages ? (
+                <ul>
+                    {Object.entries(student.programmingLanguages).map(([subject, score], index) => (
+                        <li key={index}>
+                            <strong>{subject}:</strong> {score}
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>No Programming Languages data available</p>
+            )}
         </>
     )
 

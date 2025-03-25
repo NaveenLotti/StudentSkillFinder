@@ -19,9 +19,21 @@ const Academics = () =>{
 
     return (
         <>
-            <h1>Student Skills</h1>
+            <h1>Student Academics</h1>
+            <img src={`data:image/jpeg;base64,${student.image}`} alt="StudentImage" />
             <h2>Roll No: {student.rollNo}</h2>
             <h2>Name: {student.name}</h2>
+            {student.academic ? (
+                <ul>
+                    {Object.entries(student.academic).map(([subject, score], index) => (
+                        <li key={index}>
+                            <strong>{subject}:</strong> {score}
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>No academic data available</p>
+            )}
         </>
     )
 
