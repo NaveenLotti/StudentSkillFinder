@@ -6,8 +6,7 @@ function App() {
 
   return (
     <>
-    <h1>Studnet Skill Finder </h1>
-    <StudentSearch></StudentSearch>      
+      <StudentSearch />
     </>
   )
 }

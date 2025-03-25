@@ -1,0 +1,49 @@
+#footer {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(20px);
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 30px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Hover effect with respective colors */
+.social-links a:hover {
+    transform: scale(2.2);
+}
+
+/* Individual colors for social media icons */
+.social-links .twitter:hover {
+    color: #1DA1F2; /* Twitter Blue */
+}
+
+.social-links .facebook:hover {
+    color: #1877F2; /* Facebook Blue */
+}
+
+.social-links .instagram:hover {
+    color: #dd062e; /* Instagram Pink-Red */
+}
+
+.social-links .whatsapp:hover {
+    color: #0ce629; /* Google Plus Red */
+}
+
+.social-links .linkedin:hover {
+    color: #0077B5; /* LinkedIn Blue */
+}
