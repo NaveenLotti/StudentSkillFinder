@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./StudentSearch.css";
 import { useNavigate } from "react-router-dom";
-import logo from "../assests/text.png";
-import Contact from "./Contact";
+import Footer from "./Footer";
+import Header from "./Header";
 
 const StudentSearch = () => {
   const [rollNo, setRollNo] = useState("");
@@ -20,15 +20,7 @@ const StudentSearch = () => {
   return (
     <div>
       {/* Navbar */}
-      <div className="navbar">
-        <img src={logo} alt="logo" className="logo" />
-        <div className="nav-right">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-          <a href="#">Help</a>
-        </div>
-      </div>
+      <Header />
 
       {/* Search Card */}
       <div className="card">
@@ -52,7 +44,7 @@ const StudentSearch = () => {
       </div>
 
       {/* Contact Component */}
-      <Contact />
+      <Footer />
     </div>
   );
 };
