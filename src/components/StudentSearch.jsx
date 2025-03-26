@@ -22,7 +22,9 @@ const StudentSearch = () => {
 
     return (
         <div className="search-div">
+            <h1>Skill Finder</h1>
         <div className="student-search">
+            
             <label htmlFor="rollNo">Roll Number:</label>
             <input type="text" 
             name="rollNo"

@@ -11,14 +11,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 2px 0 10px rgba(201, 13, 13, 0.3);
+    box-shadow: 2px 0 10px rgba(29, 13, 201, 0.3);
     transform: translateX(0);
-    transition: transform 0.5s ease-in-out; /* Smooth and slow transition */
+    transition: transform 0.5s ease-in-out; 
 }
 
-/* Menu Open State */
+
 .menu.open {
-    transform: translateX(300px); /* Moves into view */
+    transform: translateX(300px); 
 }
 
 .menu-toggle {
@@ -27,7 +27,7 @@
     left: 20px;
     font-size: 24px;
     cursor: pointer;
-    background: #e52727;
+    background: #2a27e5;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -35,20 +35,20 @@
     z-index: 1000;
 }
 
-/* When menu is open, move button inside */
+
 .menu.open .menu-toggle {
     position: absolute;
     top: 15px;
-    right: 20px; /* Moves inside the menu */
-    left: auto; /* Reset left */
+    right: 20px;
+    left: auto; 
 }
 
-/* Button Hover Effect */
+
 .menu-toggle:hover {
-    background: #ff0000;
+    background: #2200ff;
 }
 
-/* Menu List */
+
 .menu-list {
     list-style: none;
     width: 100%;
@@ -69,5 +69,5 @@
 }
 
 .menu-list a:hover {
-    color: #ff0000;
+    color: #0800ff;
 }

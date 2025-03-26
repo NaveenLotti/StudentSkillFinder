@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-
-
+import "./components.css"
 
 const Academics = () =>{
     const{student, loading, error} = useSelector((state) => state.studentSlice);
@@ -19,10 +18,14 @@ const Academics = () =>{
 
     return (
         <>
-            <h1>Student Academics</h1>
-            <img src={`data:image/jpeg;base64,${student.image}`} alt="StudentImage" />
-            <h2>Roll No: {student.rollNo}</h2>
-            <h2>Name: {student.name}</h2>
+            <div className="essContainer">
+                <h1>Programming Languages</h1>
+                <img src={`data:image/jpeg;base64,${student.image}`} alt="StudentImage" />
+                <p className="rollNO">Roll No: {student.rollNo}</p>
+                <p className="name">Name: {student.name}</p>
+            </div>
+
+
             {student.academic ? (
                 <ul>
                     {Object.entries(student.academic).map(([subject, score], index) => (
