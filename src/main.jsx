@@ -12,5 +12,4 @@ createRoot(document.getElementById('root')).render(
       <AppRouter />
     </Provider>
   </StrictMode>
-
 );

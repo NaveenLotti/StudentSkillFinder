@@ -19,28 +19,50 @@ const Academics = () =>{
     return (
         <>
             <div className="essContainer">
-                <h1>Programming Languages</h1>
+                <h1>Academic Details</h1>
                 <img src={`data:image/jpeg;base64,${student.image}`} alt="StudentImage" />
                 <p className="rollNO">Roll No: {student.rollNo}</p>
                 <p className="name">Name: {student.name}</p>
             </div>
 
-
-            {student.academic ? (
-                <ul>
-                    {Object.entries(student.academic).map(([subject, score], index) => (
-                        <li key={index}>
-                            <strong>{subject}:</strong> {score}
-                        </li>
-                    ))}
-                </ul>
+            <div className="p-cards">
+                {student.academic ? (
+                Object.entries(student.academic).map(([subject, score], index) => {
+                    const bgColor = getRandomColor();
+                    return(<div key={index} className="p-card"  style={{ backgroundColor: bgColor }} >
+                <h3>{subject}</h3>
+                <div className="progress-bar">
+                    <div
+                        className="progress"
+                        style={{
+                            width: `${score}%`,
+                            backgroundColor: getProgressColor(score),
+                        }}
+                    ></div>
+                </div>
+                    <p>{score}%</p>
+                </div>
+                )
+                })
             ) : (
                 <p>No academic data available</p>
             )}
+            </div>
+            
         </>
     )
+};
 
-    
-}
+const getRandomColor = () => {
+    const colors = ["#FFC1CC", "#FFD700", "#98FB98", "#87CEFA", "#FFA07A", "#DDA0DD"];
+    return colors[Math.floor(Math.random() * colors.length)];
+};
 
-export default Academics
+const getProgressColor = (score) => {
+    if (score >= 80) return "#4CAF50";
+    if (score >= 50) return "#FF9800";
+    return "#F44336"; 
+};
+
+
+export default Academics;

@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 2px 0 10px rgba(29, 13, 201, 0.3);
+    box-shadow: 2px 0 10px rgba(208, 0, 249, 0.3);
     transform: translateX(0);
     transition: transform 0.5s ease-in-out; 
 }
@@ -27,7 +27,7 @@
     left: 20px;
     font-size: 24px;
     cursor: pointer;
-    background: #2a27e5;
+    background: #DDA0DD;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -45,7 +45,7 @@
 
 
 .menu-toggle:hover {
-    background: #2200ff;
+    background: #fb00ff;
 }
 
 
@@ -69,5 +69,5 @@
 }
 
 .menu-list a:hover {
-    color: #0800ff;
+    color: #d374d3;
 }

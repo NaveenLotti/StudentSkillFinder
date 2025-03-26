@@ -4,7 +4,7 @@ import StudentSearch from './components/StudentSearch';
 import Academics from './components/academics';
 import WebDev from './components/webdev';
 import OtherTech from './components/otherTech';
-import ProLang from './components/Prolang';
+import ProLang from './components/ProLang';
 import Menu from './components/menu';
 
 const AppRouter = () => {

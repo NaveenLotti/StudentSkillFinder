@@ -24,20 +24,43 @@ const ProLang = () =>{
             </div>
         
 
-        {student.programmingLanguages ? (
-                <ul>
-                    {Object.entries(student.programmingLanguages).map(([subject, score], index) => (
-                        <li key={index}>
-                            <strong>{subject}:</strong> {score}
-                        </li>
-                    ))}
-                </ul>
-            ) : (
-                <p>No Programming Languages data available</p>
-            )}
+            <div className="p-cards">
+                {student.programmingLanguages ? (
+                Object.entries(student.programmingLanguages).map(([subject, score], index) => {
+                    const bgColor = getRandomColor();
+                    return(<div key={index} className="p-card"  style={{ backgroundColor: bgColor }}>
+                <h3>{subject}</h3>
+                <div className="progress-bar">
+                    <div
+                        className="progress"
+                        style={{
+                            width: `${score}%`,
+                            backgroundColor: getProgressColor(score),
+                        }}
+                    ></div>
+                </div>
+                    <p>{score}%</p>
+                </div>)
+                
+                    })
+                 ) : (
+                    <p>No Programming Languages data available</p>
+                )}
+            </div>
+
         </>
     )
+};
 
-}
+const getRandomColor = () => {
+    const colors = ["#FFC1CC", "#FFD700", "#98FB98", "#87CEFA", "#FFA07A", "#DDA0DD"];
+    return colors[Math.floor(Math.random() * colors.length)];
+};
+
+const getProgressColor = (score) => {
+    if (score >= 80) return "#4CAF50";
+    if (score >= 50) return "#FF9800";
+    return "#F44336"; 
+};
 
 export default ProLang
