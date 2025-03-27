@@ -1,10 +1,22 @@
 import React from "react";
-import "./Footer.css";
-import { FaTwitter, FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+import logo from "../assests/text.png";
+import "./Header and Footer.css";
+import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
-const Footer = () => {
-  return (
-    <footer id="footer">
+
+const HeaderandFooter = () => {
+    return (
+        <div>
+            <div className="navbar">
+        <img src={logo} alt="logo" className="logo" />
+        <div className="nav-right">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Help</a>
+        </div>
+      </div>
+      <footer id="footer">
       <div className="footer-content">
           <div className="logo">
              <img src="src/assests/logo.png" alt="logo" />
@@ -26,7 +38,8 @@ const Footer = () => {
       </div>
 
     </footer>
-  );
+        </div>
+    );
 };
 
-export default Footer;
+export default HeaderandFooter;

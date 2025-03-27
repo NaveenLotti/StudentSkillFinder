@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./StudentSearch.css";
 import { useNavigate } from "react-router-dom";
-import Footer from "./Footer";
-import Header from "./Header";
+// import Footer from "./Footer";
+// import Header from "./Header";
+import HeaderandFooter from "./Header and Footer";
 
 const StudentSearch = () => {
   const [rollNo, setRollNo] = useState("");
@@ -20,7 +21,7 @@ const StudentSearch = () => {
   return (
     <div>
       {/* Navbar */}
-      <Header />
+      <HeaderandFooter />
 
       {/* Search Card */}
       <div className="card">
@@ -44,7 +45,6 @@ const StudentSearch = () => {
       </div>
 
       {/* Contact Component */}
-      <Footer />
     </div>
   );
 };
