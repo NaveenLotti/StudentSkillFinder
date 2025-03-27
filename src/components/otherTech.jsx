@@ -1,16 +1,24 @@
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./components.css";
+import { fetchStudentDetails } from "../../redux/slices/studentSlice";
+import { useParams } from "react-router-dom";
 
 const OtherTech = () => {
     const { student, loading, error } = useSelector((state) => state.studentSlice);
-    
-    if (loading) return <h1>Loading...</h1>;
-    if (error) return <h1>Error: {error}</h1>;
-    if (!student) return <h1>No Student Data Found</h1>;
+    const dispatch = useDispatch();
+    const { studentId } = useParams();
+
+    useEffect(() => {
+        dispatch(fetchStudentDetails(studentId));
+    }, [dispatch, studentId]);
+
+    if (loading) return <div className="container"><h1>Loading...</h1></div>;
+    if (error) return <div className="container"><h1>Error: {error}</h1></div>;
+    if (!student) return <div className="container"><h1>No Student Data Found</h1></div>;
 
     return (
-        <div>
+        <div className="container">
             <div className="essContainer">
                 <h1>Other Technologies</h1>
                 <img src={`data:image/jpeg;base64,${student.image}`} alt="Student" />
@@ -54,7 +62,7 @@ const getRandomColor = () => {
 const getProgressColor = (score) => {
     if (score >= 80) return "#4CAF50";
     if (score >= 50) return "#FF9800";
-    return "#F44336"; 
+    return "#F44336";
 };
 
 export default OtherTech;

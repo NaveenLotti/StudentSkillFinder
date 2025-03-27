@@ -1,72 +1,154 @@
-body{
-    background-color: #fff;
-}
+/* components.css */
 
-.essContainer{
+/* Base styles */
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container styles */
+  .container {
+    padding: 20px;
+    margin-top: 80px; /* Provides space below header */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Header protection */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Content container */
+  .essContainer {
     text-align: center;
     padding: 20px;
-    font-family: Arial, sans-serif;
-}
-h1{
+    margin-bottom: 30px;
+  }
+  
+  /* Typography */
+  h1 {
     color: black;
-}
-p{
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  
+  h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  p {
     font-size: 16px;
     font-weight: bold;
     color: black;
-}
-
-.rollNo, .name{
+    margin: 5px 0;
+  }
+  
+  .rollNO, .name {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: bold;
     color: black;
-}
-
-.essContainer img{
+    margin: 10px 0;
+  }
+  
+  /* Image styles */
+  .essContainer img {
     width: 200px;
     height: 200px;
     border-radius: 20px;
     margin: 20px 0;
     box-shadow: 0px 8px 10px rgba(48, 20, 205, 0.363);
-}
-
-.p-cards{
-    width: 1000px;
+    object-fit: cover;
+  }
+  
+  /* Cards container */
+  .p-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    color: black;
     gap: 20px;
-    margin-top: 20px;
-}
-
-.p-card{
+    margin: 30px auto;
+    max-width: 1000px;
+  }
+  
+  /* Individual cards */
+  .p-card {
     background: #fff;
     border-radius: 10px;
     padding: 15px;
     width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
-}
-
-.p-card:hover{
+  }
+  
+  .p-card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(19, 12, 224, 0.3);
-}
-
-.progress-bar {
+  }
+  
+  /* Progress bar styles */
+  .progress-bar {
     width: 100%;
     height: 10px;
     background: #ddd;
     border-radius: 5px;
     margin: 10px 0;
     overflow: hidden;
-}
-
-.progress {
+  }
+  
+  .progress {
     height: 100%;
     border-radius: 5px;
     transition: width 0.5s ease-in-out;
-}
+  }
+  
+  /* Loading and error states */
+  .loading-state, .error-state, .no-data-state {
+    text-align: center;
+    padding: 50px;
+    margin-top: 100px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      margin-top: 60px;
+      padding: 10px;
+    }
+    
+    .p-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .essContainer img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+    
+    .rollNO, .name {
+      font-size: 1.1rem;
+    }
+    
+    .p-card {
+      width: 100%;
+    }
+  }

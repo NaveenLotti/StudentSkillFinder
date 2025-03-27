@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import "./components.css"
+import "./components.css";
+import { fetchStudentDetails } from "../../redux/slices/studentSlice";
 
-const Academics = () =>{
-    const{student, loading, error} = useSelector((state) => state.studentSlice);
-    console.log(student);
+const Academics = () => {
+    const { student, loading, error } = useSelector((state) => state.studentSlice);
+    const dispatch = useDispatch();
+    const { studentId } = useParams(); // Assuming 'studentId' is the parameter name
 
     useEffect(() => {
-        
-    }, [student]);
+        dispatch(fetchStudentDetails(studentId)); // Replace with the actual action to fetch student details
+    }, [dispatch, studentId]);
 
     if (loading) return <h1>Loading...</h1>;
     if (error) return <h1>Error: {error}</h1>;
     if (!student) return <h1>No Student Data Found</h1>;
 
-
     return (
-        <>
+        <div className="container">
             <div className="essContainer">
                 <h1>Academic Details</h1>
                 <img src={`data:image/jpeg;base64,${student.image}`} alt="StudentImage" />
@@ -26,31 +27,31 @@ const Academics = () =>{
             </div>
 
             <div className="p-cards">
-                {student.academic ? (
-                Object.entries(student.academic).map(([subject, score], index) => {
-                    const bgColor = getRandomColor();
-                    return(<div key={index} className="p-card"  style={{ backgroundColor: bgColor }} >
-                <h3>{subject}</h3>
-                <div className="progress-bar">
-                    <div
-                        className="progress"
-                        style={{
-                            width: `${score}%`,
-                            backgroundColor: getProgressColor(score),
-                        }}
-                    ></div>
-                </div>
-                    <p>{score}%</p>
-                </div>
-                )
-                })
-            ) : (
-                <p>No academic data available</p>
-            )}
+                {student.academic && Object.keys(student.academic).length > 0 ? (
+                    Object.entries(student.academic).map(([subject, score], index) => {
+                        const bgColor = getRandomColor();
+                        return (
+                            <div key={index} className="p-card" style={{ backgroundColor: bgColor }}>
+                                <h3>{subject}</h3>
+                                <div className="progress-bar">
+                                    <div
+                                        className="progress"
+                                        style={{
+                                            width: `${score}%`,
+                                            backgroundColor: getProgressColor(score),
+                                        }}
+                                    ></div>
+                                </div>
+                                <p>{score}%</p>
+                            </div>
+                        );
+                    })
+                ) : (
+                    <p>No academic data available</p>
+                )}
             </div>
-            
-        </>
-    )
+        </div>
+    );
 };
 
 const getRandomColor = () => {
@@ -61,8 +62,7 @@ const getRandomColor = () => {
 const getProgressColor = (score) => {
     if (score >= 80) return "#4CAF50";
     if (score >= 50) return "#FF9800";
-    return "#F44336"; 
+    return "#F44336";
 };
-
 
 export default Academics;
