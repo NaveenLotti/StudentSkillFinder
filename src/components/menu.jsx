@@ -18,7 +18,7 @@ const Menu = () => {
       >
         ☰
       </button>
-
+      
       <nav className={`menu ${isOpen ? "open" : ""}`}>
         <button className="menu-toggle close-btn" onClick={() => setIsOpen(false)}>
           ×

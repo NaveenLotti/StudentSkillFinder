@@ -1,3 +1,7 @@
+.container{
+    display: flex;
+}
+
 .student-search{
     display: flex;
     justify-content: center;
@@ -10,15 +14,15 @@ label{
 input{
     font-size: 1.5rem;
     border-radius: 5px;
-    border:1px solid black;
-}
-input:focus{
-    background-color: rgb(107, 104, 104);
+    color: rgb(175, 14, 207);
+    background-color: rgb(255, 255, 255);
+    border:1px solid rgb(199, 15, 236);
+    box-shadow: 0px 8px 10px rgba(48, 20, 205, 0.363);
 }
 
 input::placeholder{
     font-size: 1.25rem;
-    color: rgb(105, 39, 198);
+    color: rgb(137, 39, 198);
 }
 
 button{

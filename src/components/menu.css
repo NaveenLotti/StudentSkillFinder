@@ -1,13 +1,13 @@
 .dashboard-layout {
     position: relative;
     min-height: 100vh;
-    padding-bottom: 80px; /* Space for footer */
+    padding-bottom: 80px;
 }
 .menu {
     position: fixed;
-    top: 0;
+    top: 89px;
     left: -300px; 
-    height: 100vh;
+    height: 69vh;
     bottom: 0px;
     width: 250px;
     background: #222;
@@ -19,12 +19,12 @@
     box-shadow: 2px 0 10px rgba(208, 0, 249, 0.3);
     transform: translateX(0);
     transition: transform 0.5s ease-in-out; 
-    z-index: 1000; /* Ensure the menu is above other elements */
+    z-index: 1000;
 }
 
 
 .menu.open {
-    transform: translateX(300px); 
+    transform: translateX(298px); 
 }
 
 .menu-toggle {
@@ -75,4 +75,11 @@
 
 .menu-list a:hover {
     color: #d374d3;
+}
+
+h1{
+    color:rgb(6, 6, 6);
+}
+h1:hover{
+    color:#d374d3;
 }

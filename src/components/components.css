@@ -1,6 +1,3 @@
-/* components.css */
-
-/* Base styles */
 body {
     background-color: #fff;
     margin: 0;
@@ -8,16 +5,17 @@ body {
     font-family: Arial, sans-serif;
   }
   
-  /* Container styles */
+
   .container {
     padding: 20px;
-    margin-top: 80px; /* Provides space below header */
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
   
-  /* Header protection */
   header {
     position: fixed;
     top: 0;
@@ -28,14 +26,12 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  /* Content container */
   .essContainer {
     text-align: center;
     padding: 20px;
     margin-bottom: 30px;
   }
   
-  /* Typography */
   h1 {
     color: black;
     margin-top: 0;
@@ -62,17 +58,14 @@ body {
     margin: 10px 0;
   }
   
-  /* Image styles */
   .essContainer img {
     width: 200px;
     height: 200px;
-    border-radius: 20px;
+    border-radius: 50%;
     margin: 20px 0;
     box-shadow: 0px 8px 10px rgba(48, 20, 205, 0.363);
-    object-fit: cover;
   }
   
-  /* Cards container */
   .p-cards {
     display: flex;
     flex-wrap: wrap;
@@ -82,7 +75,6 @@ body {
     max-width: 1000px;
   }
   
-  /* Individual cards */
   .p-card {
     background: #fff;
     border-radius: 10px;
@@ -98,7 +90,7 @@ body {
     box-shadow: 0 6px 12px rgba(19, 12, 224, 0.3);
   }
   
-  /* Progress bar styles */
+
   .progress-bar {
     width: 100%;
     height: 10px;
@@ -114,14 +106,13 @@ body {
     transition: width 0.5s ease-in-out;
   }
   
-  /* Loading and error states */
+
   .loading-state, .error-state, .no-data-state {
     text-align: center;
     padding: 50px;
     margin-top: 100px;
   }
   
-  /* Responsive adjustments */
   @media (max-width: 768px) {
     .container {
       margin-top: 60px;

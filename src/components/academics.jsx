@@ -7,10 +7,10 @@ import { fetchStudentDetails } from "../../redux/slices/studentSlice";
 const Academics = () => {
     const { student, loading, error } = useSelector((state) => state.studentSlice);
     const dispatch = useDispatch();
-    const { studentId } = useParams(); // Assuming 'studentId' is the parameter name
+    const { studentId } = useParams(); 
 
     useEffect(() => {
-        dispatch(fetchStudentDetails(studentId)); // Replace with the actual action to fetch student details
+        dispatch(fetchStudentDetails(studentId));
     }, [dispatch, studentId]);
 
     if (loading) return <h1>Loading...</h1>;
