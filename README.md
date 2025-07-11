@@ -1,12 +1,16 @@
-# React + Vite
+The project StudentSkill Finder is mini project that me and my friends created.
+This application's frontend is developed using React.js framework. 
+This application is built to showcase and monitor the skills and improvemnt of students.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+for the above project to work you need these imports to be installed in your environment.
+1.NPM
+->npm init -y
+->npm i
 
-Currently, two official plugins are available:
+2.React-Router-Dom
+->npm i react-router-dom
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3.Redux
+->npm i react-redux
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+after installing these you are good to go.
